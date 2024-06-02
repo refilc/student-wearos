@@ -6,8 +6,7 @@ class AnimatedCircleTime extends StatefulWidget {
   final Duration duration;
 
   const AnimatedCircleTime(
-      {Key? key, required this.progress, required this.duration})
-      : super(key: key);
+      {super.key, required this.progress, required this.duration});
 
   @override
   _AnimatedCircleTimeState createState() => _AnimatedCircleTimeState();
