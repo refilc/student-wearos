@@ -30,7 +30,7 @@ class _MyAppState extends State<MyApp> {
         children: [
           Center(
               child: AnimatedCircleTime(
-                  progress: progress, duration: const Duration(milliseconds: 240))),
+                  progress: progress, duration: const Duration(milliseconds: 200))),
           Center(
               child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -40,7 +40,7 @@ class _MyAppState extends State<MyApp> {
                   fixedSize: MaterialStateProperty.all(const Size.fromWidth(40)),
                 ),
                 onPressed: () {
-                  updateProgress(progress - 0.1); // Update progress value
+                  updateProgress(progress - 0.01); // Update progress value
                 },
                 child: const Text('-'),
               )
