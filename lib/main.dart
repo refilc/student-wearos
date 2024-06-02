@@ -35,15 +35,15 @@ class _MyAppState extends State<MyApp> {
               child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              ElevatedButton(
-                style: ButtonStyle(
-                  fixedSize: MaterialStateProperty.all(const Size.fromWidth(40)),
-                ),
-                onPressed: () {
-                  updateProgress(progress - 0.01); // Update progress value
-                },
-                child: const Text('-'),
-              )
+              // ElevatedButton(
+              //   style: ButtonStyle(
+              //     fixedSize: MaterialStateProperty.all(const Size.fromWidth(40)),
+              //   ),
+              //   onPressed: () {
+              //     updateProgress(progress - 0.01); // Update progress value
+              //   },
+              //   child: const Text('-'),
+              // )
             ],
           ))
         ],
