@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:refilcwatch/ui/circle_specific/animated_circle_time.dart';
@@ -8,6 +7,8 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
   _MyAppState createState() => _MyAppState();
 }
@@ -17,7 +18,7 @@ class _MyAppState extends State<MyApp> {
 
   void updateProgress(double newProgress) {
     setState(() {
-      progress = newProgress.clamp(0.0, 1.0);
+      progress = newProgress.clamp(0.001, 1.0); // hulye fix, azert hogy a kor ne tunjon el teljesen
     });
   }
 
@@ -29,7 +30,7 @@ class _MyAppState extends State<MyApp> {
         children: [
           Center(
               child: AnimatedCircleTime(
-                  progress: progress, duration: const Duration(milliseconds: 500))),
+                  progress: progress, duration: const Duration(milliseconds: 240))),
           Center(
               child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
